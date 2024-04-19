@@ -6,7 +6,7 @@ const App = () => {
   const [codeSnippet, setCodeSnippet] = useState("// write your code here")
 
   return (
-    <main className="h-screen grid grid-cols-2 gap-20">
+    <main className="h-screen grid grid-cols-2">
       <CodeEditor codeSnippet={codeSnippet} setCodeSnippet={setCodeSnippet} />
       <SnippetPreview codeSnippet={codeSnippet} />
     </main>

@@ -6,7 +6,7 @@ export const editorOptions: EditorProps["options"] = {
   wordWrap: "on",
   lineNumbers: "on",
   insertSpaces: false,
-  tabSize: 4,
+  tabSize: 2,
   autoIndent: "full",
   formatOnType: true,
   formatOnPaste: true,
