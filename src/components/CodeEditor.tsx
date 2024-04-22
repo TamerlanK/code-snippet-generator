@@ -14,7 +14,7 @@ const CodeEditor = ({ codeSnippet, setCodeSnippet }: CodeEditorProps) => {
   return (
     <Editor
       height="100vh"
-      defaultLanguage="javascript"
+      defaultLanguage="tsx"
       theme="vs-dark"
       value={codeSnippet}
       onChange={onCodeChange}
