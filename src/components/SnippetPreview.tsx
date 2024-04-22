@@ -14,9 +14,9 @@ const SnippetPreview = ({ codeSnippet }: SnippetPreviewProps) => {
   const handleCopy = () => copyToClipboard(codeSnippet)
 
   return (
-    <div className="overflow-auto | bg-square">
+    <div className="overflow-auto flex-1">
       {codeSnippet && (
-        <div className="px-6 rounded-md max-w-3xl mx-auto h-full flex flex-col justify-center">
+        <div className="p-6 rounded-md max-w-3xl mx-auto h-full flex flex-col justify-center">
           <div className="flex justify-between items-center rounded-t-lg py-1.5 bg-[#504265] px-4 text-slate-300 text-xs font-mono">
             <p>tsx</p>
             <button
@@ -32,9 +32,12 @@ const SnippetPreview = ({ codeSnippet }: SnippetPreviewProps) => {
             </button>
           </div>
           <SyntaxHighlighter
-            language="tsx"
+            language="typescript"
             style={synthwave84}
-            customStyle={{ borderRadius: "0 0 8px 8px", margin: 0 }}
+            customStyle={{
+              borderRadius: "0 0 8px 8px",
+              margin: 0,
+            }}
           >
             {codeSnippet}
           </SyntaxHighlighter>
