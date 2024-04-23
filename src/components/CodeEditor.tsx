@@ -19,6 +19,7 @@ const CodeEditor = ({ codeSnippet, setCodeSnippet }: CodeEditorProps) => {
       value={codeSnippet}
       onChange={onCodeChange}
       options={editorOptions}
+      loading={"Hello"}
     />
   )
 }
