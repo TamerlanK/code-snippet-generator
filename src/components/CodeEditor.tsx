@@ -1,5 +1,6 @@
 import { Editor } from "@monaco-editor/react"
 import { editorOptions } from "../../config"
+import Spinner from "./Spinner"
 
 interface CodeEditorProps {
   codeSnippet: string
@@ -13,13 +14,12 @@ const CodeEditor = ({ codeSnippet, setCodeSnippet }: CodeEditorProps) => {
 
   return (
     <Editor
-      height="100vh"
       defaultLanguage="typescript"
       theme="vs-dark"
       value={codeSnippet}
       onChange={onCodeChange}
       options={editorOptions}
-      loading={"Hello"}
+      loading={<Spinner />}
     />
   )
 }

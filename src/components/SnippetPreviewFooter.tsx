@@ -11,6 +11,7 @@ const SnippetPreviewFooter = ({
 }: SnippetPreviewFooterProps) => {
   return (
     <div className="w-full flex justify-center md:justify-end items-center px-2 md:px-6 h-16 bg-black/30 backdrop-blur-[2px] border-t border-t-[#ffffff0d] shadow-inner shadow-[#ffffff0d]">
+      {/* TODO: Add hover effect to button */}
       <button
         disabled={disabled}
         onClick={handleAddSnippet}
