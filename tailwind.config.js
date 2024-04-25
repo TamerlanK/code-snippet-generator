@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       backgroundSize: {
-        "300%": "300%"
-      }
+        "300%": "300%",
+      },
+      transitionProperty: {
+        "background-position": "background-position",
+      },
     },
   },
   plugins: [],

@@ -25,7 +25,7 @@ body {
     repeating-linear-gradient(
       to right,
       transparent,
-      transparent 29px,
+      transparent calc(var(--square-size) - 1px),
       var(--line-clr) var(--square-size),
       var(--line-clr) calc(var(--square-size) + 1px)
     ),
@@ -51,17 +51,4 @@ body {
 
 ::-webkit-scrollbar-corner {
   @apply bg-transparent;
-}
-
-.btn-gradient {
-  @apply bg-gradient-to-r from-[#614d85] via-[#952676] to-[#2d1854] bg-left bg-300%;
-  transition: background-position 1s;
-}
-
-.btn-gradient:not(:disabled):hover {
-  @apply bg-right scale-[1.01];
-}
-
-.btn-gradient:not(:disabled):active {
-  @apply scale-[0.98];
 }
