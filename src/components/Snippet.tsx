@@ -11,7 +11,7 @@ const Snippet = ({ codeSnippet, language }: Props) => {
   return (
     <div className="overflow-auto flex-1">
       {codeSnippet && (
-        <div className="max-w-4xl mx-auto h-full flex flex-col justify-center p-6">
+        <div className="max-w-4xl mx-auto h-full flex flex-col justify-center px-6">
           <SnippetHeader codeSnippet={codeSnippet} language={language} />
           <SyntaxHighlighter
             language={language}
