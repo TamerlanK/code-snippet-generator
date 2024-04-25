@@ -15,9 +15,9 @@ const SnippetPreviewFooter = ({
       <button
         disabled={disabled}
         onClick={handleAddSnippet}
-        className="px-3.5 py-2 rounded-lg text-sm bg-gradient-to-r from-[#920075] to-[#614D85] from disabled:cursor-not-allowed disabled:opacity-50 w-full md:w-fit flex justify-center"
+        className="w-full md:w-fit flex justify-center px-3 py-2 rounded-lg disabled:cursor-not-allowed disabled:opacity-50 | btn-gradient"
       >
-        <span className="font-semibold tracking-wide text-slate-50 flex items-center gap-x-1.5">
+        <span className="tracking-wider text-slate-50 flex items-center gap-x-1.5 text-sm">
           <Plus className="size-5" />
           Add Snippet
         </span>
