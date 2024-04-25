@@ -2,11 +2,12 @@ import { useClipboard } from "../hooks/useClipboard"
 import toast from "react-hot-toast"
 import { Clipboard, ClipboardCheck } from "lucide-react"
 
-interface SnippetHeaderProps {
+interface Props {
   codeSnippet: string
+  language: string
 }
 
-const SnippetHeader = ({ codeSnippet }: SnippetHeaderProps) => {
+const SnippetHeader = ({ codeSnippet, language }: Props) => {
   const { copied, copyToClipboard } = useClipboard()
 
   const handleCopy = () => {
@@ -16,7 +17,7 @@ const SnippetHeader = ({ codeSnippet }: SnippetHeaderProps) => {
 
   return (
     <div className="flex justify-between items-center rounded-t-lg py-1.5 bg-[#504265] px-4 text-slate-300 text-xs font-mono">
-      <p>typescript</p>
+      <p>{language}</p>
       <button
         className="py-1 inline-flex items-center gap-x-2"
         onClick={handleCopy}

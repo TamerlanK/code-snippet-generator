@@ -1,6 +1,6 @@
 export { default as CodeEditor } from "./CodeEditor"
 export { default as SnippetHeader } from "./SnippetHeader"
-export { default as SnippetPreview } from "./SnippetPreview"
-export { default as SnippetPreviewFooter } from "./SnippetPreviewFooter"
+export { default as Snippet } from "./Snippet"
+export { default as Preview } from "./Preview"
 
-export {default as Spinner} from './Spinner'
+export { default as Spinner } from "./Spinner"

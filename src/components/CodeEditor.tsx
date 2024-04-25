@@ -2,19 +2,24 @@ import { Editor } from "@monaco-editor/react"
 import { editorOptions } from "../../config"
 import Spinner from "./Spinner"
 
-interface CodeEditorProps {
+interface Props {
   codeSnippet: string
   setCodeSnippet: React.Dispatch<React.SetStateAction<string>>
+  language: string
 }
 
-const CodeEditor = ({ codeSnippet, setCodeSnippet }: CodeEditorProps) => {
+const CodeEditor = ({
+  codeSnippet,
+  setCodeSnippet,
+  language,
+}: Props) => {
   const onCodeChange = (value: string | undefined) => {
     setCodeSnippet(value || "")
   }
 
   return (
     <Editor
-      defaultLanguage="typescript"
+      language={language}
       theme="vs-dark"
       value={codeSnippet}
       onChange={onCodeChange}

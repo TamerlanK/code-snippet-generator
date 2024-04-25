@@ -1,0 +1,16 @@
+export const languages: string[] = [
+  "css",
+  "html",
+  "java",
+  "javascript",
+  "json",
+  "less",
+  "lua",
+  "php",
+  "python",
+  "r",
+  "ruby",
+  "scss",
+  "typescript",
+  "xml",
+]

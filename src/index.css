@@ -52,3 +52,7 @@ body {
 ::-webkit-scrollbar-corner {
   @apply bg-transparent;
 }
+
+.btn-gradient {
+  @apply w-full md:w-fit flex justify-center px-3 py-2 rounded-lg disabled:cursor-not-allowed disabled:opacity-50 transition-background-position duration-1000 bg-gradient-to-r from-[#614d85] via-[#952676] to-[#2d1854] bg-left bg-300% hover:bg-right hover:scale-[1.01] active:scale-[0.98] disabled:hover:bg-left disabled:hover:scale-100;
+}
