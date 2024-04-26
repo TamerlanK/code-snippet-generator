@@ -16,7 +16,7 @@ const SnippetHeader = ({ codeSnippet, language }: Props) => {
   }
 
   return (
-    <div className="flex justify-between items-center rounded-t-lg py-1.5 bg-[#504265] px-4 text-slate-300 text-xs font-mono">
+    <div className="flex justify-between items-center rounded-t-lg py-1.5 bg-snippet-header px-4 text-slate-300 text-xs font-mono">
       <p>{language}</p>
       <button
         className="py-1 inline-flex items-center gap-x-2"

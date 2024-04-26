@@ -24,7 +24,7 @@ const Preview = ({ codeSnippet, language, setLanguage }: Props) => {
 
   return (
     <div className="relative flex flex-col h-full overflow-y-auto | bg-square">
-      <div className="w-full flex justify-between items-center px-2 md:px-6 h-16 py-3 bg-black/30 backdrop-blur-[2px] border-t border-t-[#ffffff0d] shadow-inner shadow-[#ffffff0d] ">
+      <div className="w-full flex justify-between items-center px-2 md:px-6 h-16 py-3 bg-black/30 backdrop-blur-[2px] border-t border-t-neutral-primary shadow-inner shadow-neutral-primary ">
         <LanguageDropdown
           isOpen={isDropdownOpen}
           setIsOpen={setIsDropdownOpen}

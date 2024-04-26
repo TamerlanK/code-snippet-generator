@@ -22,7 +22,7 @@ const LanguageDropdown = ({
   return (
     <>
       <div
-        className="flex items-center h-full justify-between w-32 cursor-pointer text-slate-300 bg-[#2a2139] px-3 py-1.5 rounded-md"
+        className="flex items-center h-full justify-between w-32 cursor-pointer text-slate-300 bg-primary px-3 py-1.5 rounded-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div>{language}</div>
@@ -37,14 +37,14 @@ const LanguageDropdown = ({
       {isOpen && (
         <div
           ref={ref}
-          className="absolute top-full h-64 w-32 rounded-md overflow-y-scroll z-20 left-2 md:left-6 bg-[#2a2139] border-t border-t-[#ffffff0d] shadow-md"
+          className="absolute top-full h-64 w-32 rounded-md overflow-y-scroll z-20 left-2 md:left-6 bg-primary border-t border-t-neutral-primary shadow-md"
         >
           {languages.map((lang) => (
             <div
               key={lang}
               className={cn(
-                "p-2 cursor-pointer hover:bg-[#34294f] text-slate-300",
-                lang === language && "bg-[#382a5d] hover:bg-[#382a5d]"
+                "p-2 cursor-pointer hover:bg-secondary text-slate-300",
+                lang === language && "bg-highlight hover:bg-highlight"
               )}
               onClick={() => handleLanguageChange(lang)}
             >

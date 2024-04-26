@@ -42,11 +42,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-[5px] bg-[#9d8bca30];
+  @apply rounded-[5px] bg-scrollbar-thumb;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-[#9d8bca50];
+  @apply bg-scrollbar-thumb-hover;
 }
 
 ::-webkit-scrollbar-corner {
