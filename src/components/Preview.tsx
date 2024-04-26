@@ -1,10 +1,7 @@
 import { useState } from "react"
-import { Snippet } from "."
-import LanguageDropdown from "./LanguageDropdown"
-import { FullscreenIcon } from "lucide-react"
 import { FullScreen, useFullScreenHandle } from "react-full-screen"
+import { FullscreenButton, LanguageDropdown, Snippet } from "."
 import { cn } from "../lib/utils"
-import FullscreenButton from "./FullscreenButton"
 
 interface Props {
   codeSnippet: string
@@ -23,7 +20,7 @@ const Preview = ({ codeSnippet, language, setLanguage }: Props) => {
   }
 
   return (
-    <div className="relative flex flex-col h-full overflow-y-auto | bg-square">
+    <div className="relative flex flex-col-reverse sm:flex-col h-full overflow-y-auto | bg-square">
       <div className="w-full flex justify-between items-center px-2 md:px-6 h-16 py-3 bg-black/30 backdrop-blur-[2px] border-t border-t-neutral-primary shadow-inner shadow-neutral-primary ">
         <LanguageDropdown
           isOpen={isDropdownOpen}

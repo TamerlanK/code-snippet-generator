@@ -16,7 +16,7 @@ export default {
         ["snippet-header"]: "#504265",
         ["scrollbar-thumb"]: "#9d8bca30",
         ["scrollbar-thumb-hover"]: "#9d8bca50",
-        ["neutral-primary"]: "#ffffff0d"
+        ["neutral-primary"]: "#ffffff0d",
       },
     },
   },

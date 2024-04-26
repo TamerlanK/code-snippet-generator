@@ -37,7 +37,7 @@ const LanguageDropdown = ({
       {isOpen && (
         <div
           ref={ref}
-          className="absolute top-full h-64 w-32 rounded-md overflow-y-scroll z-20 left-2 md:left-6 bg-primary border-t border-t-neutral-primary shadow-md"
+          className="absolute bottom-full sm:top-full h-32 sm:h-64 w-32 rounded-md overflow-y-scroll z-20 left-2 md:left-6 bg-primary border-t border-t-neutral-primary shadow-md"
         >
           {languages.map((lang) => (
             <div
