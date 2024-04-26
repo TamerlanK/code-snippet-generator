@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { Snippet } from "."
 import LanguageDropdown from "./LanguageDropdown"
+import { FullscreenIcon } from "lucide-react"
+import { FullScreen, useFullScreenHandle } from "react-full-screen"
+import { cn } from "../lib/utils"
+import FullscreenButton from "./FullscreenButton"
 
 interface Props {
   codeSnippet: string
@@ -11,6 +15,8 @@ interface Props {
 const Preview = ({ codeSnippet, language, setLanguage }: Props) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
+  const handleFullscrenn = useFullScreenHandle()
+
   const handleLanguageChange = (value: string) => {
     setLanguage(value)
     setIsDropdownOpen(false)
@@ -18,16 +24,25 @@ const Preview = ({ codeSnippet, language, setLanguage }: Props) => {
 
   return (
     <div className="relative flex flex-col h-full overflow-y-auto | bg-square">
-      <div className="w-full flex justify-between items-center px-2 md:px-6 h-16 py-3 bg-black/30 backdrop-blur-[2px] border-t border-t-[#ffffff0d] shadow-inner shadow-[#ffffff0d]">
+      <div className="w-full flex justify-between items-center px-2 md:px-6 h-16 py-3 bg-black/30 backdrop-blur-[2px] border-t border-t-[#ffffff0d] shadow-inner shadow-[#ffffff0d] ">
         <LanguageDropdown
           isOpen={isDropdownOpen}
           setIsOpen={setIsDropdownOpen}
           language={language}
           handleLanguageChange={handleLanguageChange}
         />
+        <FullscreenButton onEnter={handleFullscrenn.enter} />
       </div>
 
-      <Snippet codeSnippet={codeSnippet} language={language} />
+      <FullScreen
+        handle={handleFullscrenn}
+        className={cn(
+          "h-full overflow-auto",
+          handleFullscrenn.active ? "bg-square p-10" : "p-6"
+        )}
+      >
+        <Snippet codeSnippet={codeSnippet} language={language} />
+      </FullScreen>
     </div>
   )
 }

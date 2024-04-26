@@ -9,9 +9,9 @@ interface Props {
 
 const Snippet = ({ codeSnippet, language }: Props) => {
   return (
-    <div className="overflow-auto flex-1">
+    <>
       {codeSnippet && (
-        <div className="max-w-4xl mx-auto h-full flex flex-col justify-center px-6">
+        <div className="max-w-4xl mx-auto h-full flex flex-col justify-center">
           <SnippetHeader codeSnippet={codeSnippet} language={language} />
           <SyntaxHighlighter
             language={language}
@@ -25,7 +25,7 @@ const Snippet = ({ codeSnippet, language }: Props) => {
           </SyntaxHighlighter>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
