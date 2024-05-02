@@ -1,1 +1,1 @@
-# Code Snippet Manager
+# Code Snippet Generator
